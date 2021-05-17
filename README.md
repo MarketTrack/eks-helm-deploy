@@ -47,7 +47,7 @@ The path to the chart. (defaults to `helm/`)
 ## Example usage
 
 ```yaml
-uses: peymanmortazavi/eks-helm-deploy@v1
+uses: markettrack/eks-helm-deploy@v2
 with:
   aws-access-key-id: ${{ secrets.AWS_ACCESS__KEY_ID }}
   aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
