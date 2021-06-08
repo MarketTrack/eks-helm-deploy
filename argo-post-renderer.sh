@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 sed 's/{-/{{/'g | sed 's/-}/}}/g' <&0
