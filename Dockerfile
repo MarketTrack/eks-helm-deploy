@@ -1,7 +1,7 @@
 FROM python:3.8-slim-buster
 
 COPY deploy.sh /usr/local/bin/deploy
-COPY argo-post-renderer.sh /argo-post-renderer.sh
+COPY argo-post-renderer.sh /user/local/bin/argo-post-renderer.sh
 
 # Install the toolset.
 RUN apt -y update && apt -y install curl \

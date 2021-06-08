@@ -22,7 +22,7 @@ if [ -n "$DEPLOY_VALUES" ]; then
     UPGRADE_COMMAND="${UPGRADE_COMMAND} --set ${DEPLOY_VALUES}"
 fi
 if [ -n "$ARGO_WORKFLOW" ]; then
-    UPGRADE_COMMAND="${UPGRADE_COMMAND} --post-renderer ./argo-post-renderer.sh"
+    UPGRADE_COMMAND="${UPGRADE_COMMAND} --post-renderer argo-post-renderer"
 fi
 UPGRADE_COMMAND="${UPGRADE_COMMAND} ${DEPLOY_NAME} ${DEPLOY_CHART_PATH:-helm/}"
 echo "Executing: ${UPGRADE_COMMAND}"
