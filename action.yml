@@ -41,6 +41,9 @@ inputs:
         description: "Timeout for the job."
         required: true
         default: 5m0s
+    argo-workflow:
+        description: "if true, apply argo post-renderer to template"
+        required: false
 runs:
     using: "docker"
     image: "Dockerfile"
@@ -56,3 +59,4 @@ runs:
         DEPLOY_NAME: ${{ inputs.name }}
         DEPLOY_CHART_PATH: ${{ inputs.chart-path }}
         TIMEOUT: ${{ inputs.timeout }}
+        ARGO_WORKFLOW: ${{ inputs.argo-workflow }}

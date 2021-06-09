@@ -44,6 +44,10 @@ The name of the helm deploy.
 
 The path to the chart. (defaults to `helm/`)
 
+### `argo-workflow`
+
+if true, execute with `helm ... --post-renderer ./argo-post-renderer.sh`
+
 ## Example usage
 
 ```yaml
